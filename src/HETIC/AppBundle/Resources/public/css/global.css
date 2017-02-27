@@ -1,0 +1,775 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Light.otf");
+}
+@font-face {
+    font-family: "title";
+    src: url("../fonts/Montserrat-SemiBold.otf");
+}
+@font-face {
+    font-family: "text_body";
+    src: url("../fonts/Montserrat-Regular.otf");
+}
+@font-face {
+    font-family: "para";
+    src: url("../fonts/Montserrat-ExtraLight.otf");
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Global */
+.btn {
+    background: none;
+    padding: 4px 25px;
+    border-radius: 1px;
+}
+.btn-connexion {
+    border-color: #d8d8d8;
+    color: #d8d8d8;
+    transition: all 0.7s ease;
+}.btn-connexion:hover {
+    border-color: #fe5b39;
+    color:#fe5b39;
+    transition: all 0.7s ease;
+}
+.btn-participer {
+    color: #fe5b39;
+    border-color: #fe5b39;
+    transition: all 0.7s ease;
+}.btn-participer:hover {
+    color: #d8d8d8;
+    border-color: #d8d8d8;
+    transition: all 0.7s ease;
+}
+
+/* Header */
+header {
+    padding: 10px 0;
+}
+header nav {
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+header nav .btn {
+    margin-left: 10px;
+}
+header.first_section {
+    background-image: url(../img/header.png);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+header.first_section .logo {
+    background-image: url(../img/logo.png);
+    width: 260px;
+    height: 55px;
+    margin-left: 2%;
+    /* padding-top: 2%; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 20px;
+}
+header.first_section .logo_home {
+    background-image: url(../img/logo_home.png);
+    width: 367px;
+    height: 245px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+header.first_section .slogan {
+    font-family: 'Montserrat';
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    margin-top: 4%;
+}
+
+footer {
+    height: 60px;
+    background: #454545;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+}
+footer p {
+    font-size: 0.8em;
+}
+footer ul {
+    list-style: none;
+}
+footer ul li {
+    display: inline-block;
+}
+footer ul li a {
+    color: #FFF;
+    font-size: 1.2em;
+    margin-left: 15px;
+}
+footer ul li a:hover {
+    color: #AAA;
+}
+
+/* Home */
+
+main#landing section.second_section {
+    width: 100%;
+    height: 80%;
+    background-color: white;
+}
+.navbar {
+    width: 100%;
+    height: 25%;
+}
+
+#concept {
+    width: 500px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: #fe5b39;
+    font-family: 'Montserrat';
+    display: block;
+}
+.title_concept {
+    font-family: 'title';
+    text-align: center;
+    color: white;
+    padding-top: 5%;
+    text-transform: uppercase;
+    font-size: 1.3em;
+}
+
+.title_partenaire {
+    color: black;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+.nos_partenaires {
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 5%;
+    text-align: center;
+    font-family: "title";
+    font-size: 0.8em;
+}
+.logo_partenaire {
+    width: 10%;
+    margin: 5%;
+    margin-top: 1%;
+}
+.zone_logo_partenaire {
+    margin: 0 auto;
+    margin-top: 3%;
+}
+.logo_partenaire_axa {
+    width: 6%;
+    margin: 5%;
+    margin-top: 2%;
+}
+.logo_partenaire_madyness {
+    width: 8%;
+    margin: 5%;
+    margin-top: 2%;
+}
+.zone_phase_tournoi {
+    background-color: #e6e6e6;
+    height: 90vh;
+}
+.tournoi {
+    color: #454545;
+    padding-top: 2%;
+
+}
+.block_tournoi {
+    height: 70%;
+    background-color: white;
+    width: 25%;
+    margin: 1%;
+    margin-top: 3%;
+    display: inline-block;
+}
+.zone_block_tournoi {
+    text-align: center;
+    height: 100%;
+}
+.top_block_tournoi {
+    background-color: #ff7c61;
+    height: 35%;
+}
+.num_block_tournoi {
+    font-family: title;
+    color: white;
+    float: left;
+    margin-left: 5%;
+    font-size: 2em;
+}
+.date_block_tournoi {
+    color: white;
+    font-size: 0.9em;
+    margin-left: 5%;
+    float: left;
+}
+p.para_block_tournoi {
+    color: black;
+    text-align: left;
+    padding: 5%;
+    font-family: para;
+}
+.subject_block_tournoi {
+    color: white;
+    font-size: 1em;
+    margin-left: 5%;
+    float: left;
+}
+.logo_block {
+    width: 20%;
+    float: right;
+    margin-right: 5%;
+}
+.zone_num_logo {
+    padding-top: 3%;
+    display: block;
+    height: 45%;
+}
+main#landing .two_page .block_live {
+    height: auto;
+    background-color: white;
+    width: 30%;
+    margin: 1%;
+    margin-top: 0%;
+    display: inline-block;
+    margin-top: 3%;
+}
+.zone_block_live {
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+    height: 100%;
+}
+.logo_live {
+    background-image: url(../img/arbre.png);
+    width: 80px;
+    height: 78px;
+    background-size: cover;
+    margin: 0 auto;
+}
+.logo_live_2 {
+    background-image: url(../img/logo_play.png);
+    width: 107px;
+    height: 78px;
+    background-size: cover;
+    margin: 0 auto;
+}
+.logo_live_3 {
+    background-image: url(../img/bat_logo.png);
+    width: 80px;
+    height: 78px;
+    background-size: cover;
+    margin: 0 auto;
+}
+.title_live {
+    text-transform: uppercase;
+    color: #454545;
+    font-size: 1em;
+    text-align: left;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+.concept_para {
+    font-family: para;
+    width: 70%;
+    margin: 0 auto;
+    color: white;
+    margin-top:4%;
+}
+.zone_pourquoi_participer {
+    height: 85vh;
+    background-color: #e6e6e6;
+    margin: 0 auto;
+    position:relative;
+    text-align: center;
+}
+.para_participer {
+    float:right;
+    text-align: left;
+    color: #555555;
+    font-family: para;
+    width: 30%;
+    margin: 3%;
+/*    margin-left:8%;*/
+    margin-top: 5%;
+/*    display: inline-block;*/
+    font-size: 0.9em;
+}
+.title_participer {
+    color: #fe5b39;
+    font-family: title;
+    font-size: 1.2em;
+}
+#zone_pourquoi_inscrire {
+    min-height: 80vh;
+    height:auto;
+    background-color: #fff;
+    overflow:hidden;
+    position: relative;
+}
+.para_inscrire {
+    text-align: left;
+    color: #4b4b4b;
+    width: 100%;
+    float: left;
+    font-family: para;
+    margin-left: 5%;
+}
+.strong_inscrire {
+    font-family: title;
+}
+
+.guy_2 {
+    background-image: url(../img/guy_2.png);
+    width: 20%;
+    position: absolute;
+    background-size: cover;
+    height: 407px;
+    left: 40px;
+    bottom: 0;
+}
+
+.guy {
+    background-image: url(../img/guy.png);
+    width: 300px;
+    height: 407px;
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+    margin-top: 1.1%;
+}.guy_form {
+    background-image: url(../img/guy.png);
+    width: 300px;
+    height: 407px;
+    position: absolute;
+    right: 20px;
+        bottom: 40px;
+    z-index: -5;
+}
+.zone_gauche {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.form-input {
+    padding: 6px 68px 6px 10px;
+    margin: 5px 0;
+}
+.form {
+    margin-left: 5%;
+    text-align: left;
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 843px;
+}
+.form-submit {
+    cursor: pointer;
+    background-color: #fe5b39;
+    color: white;
+    text-decoration: none;
+    border: none;
+    margin-top: 5%;
+    padding: 6px 45px;
+}
+.zone_participant {
+    background-color: #d8d8d8;
+    height: auto;
+    padding-top: 2%;
+}
+.texte-orange {
+    color: #fe5b39;
+}
+.footer {
+    height: 70px;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.rezo {
+    width: 100%;
+    max-width: 105px;
+    min-width: 80px;
+    cursor: pointer;
+}
+.digital-village a {
+    text-decoration: none;
+    color: #fff;
+}
+.photo-sliders {
+    padding: 5px 5%;
+}
+.equipe-participant {
+    width: 30%;
+    margin: 2% 1%;
+    background: url(../img/participant2.png) white;
+    min-height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: inline-block;
+}
+.equipe-participant .white-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFF;
+    width: 100%;
+    height: 50px;
+    bottom: 0px;
+    position: absolute;
+    z-index: 10;
+}
+.nb1 {
+    background: url(../img/participant1.png) white;
+    min-height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.btn {
+    background: none;
+    padding: 4px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-see-entreprise {
+    left: calc(50% - 70.5px);
+    color: #fe5b39;
+    border-color: #fe5b39;
+    transition: all 0.7s ease;
+    line-height: 20px;
+}
+
+.btn-see-entreprise:hover {
+    transition: all 0.7s ease;
+    color: white;
+    background-color: #fe5b39;
+}
+.nb-participants {
+    color: white;
+    font-size: 1em;
+    padding: 7px 20px;
+    text-shadow: 0px 1px black;
+}
+.label-entreprise {
+    position: absolute;
+    color: white;
+    top: 105px;
+    left: 20px;
+    text-shadow: 2px 2px black;
+    font-size:1.2em;
+}
+
+/* Profile */
+main#profile .banner {
+    width: 100%;
+    height: 275px;
+    position: relative;
+    margin-bottom: 150px;
+    background-position: center;
+    background-size: cover;
+}
+main#profile .banner .logo_container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+    width: 175px;
+    height: 175px;
+    bottom: -75px;
+    background: #FFF;
+    padding: 10px;
+}
+main#profile .banner .logo_container .logo img {
+    height: 155px;
+    width: 155px;
+}
+main#profile .banner .logo_container .logo h3 {
+    margin-top: 10px;
+    text-align: center;
+    color: #fe5b39;
+}
+main#profile h4 {
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+}
+main#profile .content {
+    margin-bottom: 30px;
+}
+main#profile .content p {
+    max-width: 750px;
+    text-align: center;
+    margin: 20px auto;
+}
+.label-entreprise {
+    display: block;
+    margin-top: 0px;
+    color: white;
+}
+
+.contenu {
+    padding: 30px 20px 0 20px;
+    text-align: center;
+}
+
+.participants {
+    background: #d8d8d8;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.liste-participants {
+    display: inline-block;
+    columns: 3 120px;
+    column-gap: 20px;
+    list-style: none;
+    padding: 0;
+    font-size: 1.1em;
+}
+.liste-participants li:before {
+    content: '•';
+    margin-right: 10px;
+}
+.photo-entreprise {
+    display: inline-block;
+    max-width: 17%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+}
+main#profile .raquette {
+    top: 3%;
+    right: 1%;
+    position: absolute;
+    width: 60px;
+}
+main#profile .balle {
+    width: 12px;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+main#profile .socials {
+    margin-top: -125px;
+}
+main#profile .socials ul {
+    list-style: none;
+}
+main#profile .socials ul li {
+    display: inline-block;
+}
+main#profile .socials ul li a {
+    font-size: 1.4em;
+    margin-left: 15px;
+    color: #000;
+}
+main#profile .live .col-sm-12{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.cote_droit{
+    margin-right:30%;
+}
+
+.inscrire{
+    padding-top: 1%;
+    padding-bottom:2%;
+}
+
+.home{
+        position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 20px;
+}
+
+.circle{
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    border: 0.2em solid white;
+    border-radius: 50%;
+}
+
+.circle:after {
+    content: '';
+    display: inline-block;
+    margin-top: 1em;
+    width: 1.4em;
+    height: 1.4em;
+    border-top: 0.4em solid white;
+    border-right: 0.4em solid white;
+    -moz-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.next{
+    margin:0 auto;
+    text-align:center;
+    margin-top:3%;
+}
+
+.particant{
+    padding-top:0%;
+}
+
+main#joinStartup {
+    min-height: calc(100% - 100px);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+main#joinStartup img.guy {
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+main#joinStartup form {
+    padding: 20px;
+    background: #fe5b39;
+}
+main#joinStartup form h2 {
+    margin-top: 0;
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 1.6em;
+    margin-bottom: 25px;
+}
+main#joinStartup form input {
+    width: 100%;
+    max-width: 300px;
+    border: none;
+    padding: 5px 10px;
+}
+main#joinStartup form button[type="submit"] {
+    width: 100%;
+    max-width: 300px;
+    border: none;
+    padding: 5px 10px;
+    background: #FFF;
+    color: #fe5b39;
+}
+main#joinStartup form a {
+    color: #000;
+    font-size: 0.9em;
+}
+.connexion_form{
+background-color: #fe5b39;
+    border-radius: 10px;
+    width: 38%;
+    margin-left: 5%;
+    margin-top: 9%;
+    margin-bottom: 12%;
+    padding: 3%;
+        padding-top: 2%;
+    height: 322px;
+    color: white;
+}
+
+.title_connexion{
+    font-size:2em;
+}
+
+.none_user{
+    display:none;
+}
+
+.input_form{
+    width:250px;
+    border:none;
+    margin:3%;
+    margin-left:0%;
+    height:30px;
+    padding-left: 3%;
+    color:black;
+}
+
+.input_submit{
+    background-color: white;
+    border: none;
+    width: 150px;
+    color: #fe5b39;
+    margin-top: 5%;
+    transition: all 0.6s ease;
+     border:1px solid white;
+}
+
+.input_submit:hover{
+    background-color: #fe5b39;
+    color: white;
+    transition: all 0.6s ease;
+    border:1px solid white;
+}
+
+.forget_pwd{
+    margin-top:2.5%;
+    color:black;
+    font-family:para;
+}
+
+.body-mail {
+	box-sizing: border-box;
+	max-width: 800px;
+	width: 100%;
+	background: #fff;
+}
+.mail-header {
+	width: calc(100% - 50px);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0 25px;
+	background-image: url(../img/header.png);
+	background-size: cover;
+	background-position: center;
+	height: 150px;
+	align-items: center;
+}
+.header-mail {
+	display: inline-flex;
+	justify-content: space-between;
+	padding: 5px 30px;
+	width: calc(100% - 60px);
+}
+.logo_mail {
+	height: 50%;
+}
+.guy_mail {
+	max-height: 150px;
+}
+.main-mail {
+    padding: 8px 30px 50px;
+}
+.footer-mail, .center-mail {
+	text-align: center;
+}   
+
+.pk{
+    float:left;
+    width:9%;
+}

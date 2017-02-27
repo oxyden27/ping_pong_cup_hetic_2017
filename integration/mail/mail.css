@@ -1,0 +1,36 @@
+.body-mail {
+	box-sizing: border-box;
+	max-width: 800px;
+	width: 100%;
+	background: #fff;
+}
+.mail-header {
+	width: calc(100% - 50px);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0 25px;
+	background: url(img/header.png);
+	background-size: cover;
+	background-position: center;
+	height: 150px;
+	align-items: center;
+}
+.header-mail {
+	display: inline-flex;
+	justify-content: space-between;
+	padding: 5px 30px;
+	width: calc(100% - 60px);
+}
+.logo {
+	height: 50%;
+}
+.guy {
+	max-height: 150px;
+}
+.main-mail {
+    padding: 8px 30px 100px;
+}
+.footer-mail, .center-mail {
+	text-align: center;
+}

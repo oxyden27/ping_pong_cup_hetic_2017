@@ -1,0 +1,11 @@
+hetic_app:
+    resource: "@HETICAppBundle/Resources/config/routing.yml"
+    prefix:   /
+
+hetic_core:
+    resource: "@HETICCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+hetic_user:
+    resource: "@HETICUserBundle/Resources/config/routing.yml"
+    prefix:   /admin

@@ -1,0 +1,90 @@
+{% extends 'HETICCoreBundle::layout.html.twig' %}
+
+{% block title %}{{parent()}}{% endblock %}
+
+{% block main %}
+    <main id="profile" role="main">
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="banner" style="{% if startup.imageName != null %}background-image: url('{{ vich_uploader_asset(startup, 'imageFile') }}'){% else %}background-color: #D7D7D7;{% endif %}">
+                            <div class="logo_container">
+                                <div class="logo">
+                                    <img src="{% if startup.logoName != null %}{{ vich_uploader_asset(startup, 'logoFile') }}{% else %}http://placehold.it/150x150{% endif %}">
+                                    <h3 class="name">{{startup.name}}</h3>
+                                </div>
+                            </div>
+                            <div class="edit_button">
+                                <a href="{{path('hetic_core_startup_edit', {'id': startup.id})}}" class="button">Modifier les informations</a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h4>Descriptif</h4>
+                            {{startup.description|raw}}
+                        </div>
+
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <div class="content participants">
+                                <img src="{{asset('bundles/heticapp/img/raquette.png')}}" class="raquette">
+                                <img src="{{asset('bundles/heticapp/img/balle.png')}}" class="balle">
+                                <h4>Participants</h4>
+                                <p>{{startup.players|length}} participants</p>
+                                <ul class="liste-participants">
+                                    {% for player in startup.players %}
+                                        <li>{{player.firstname}} {{player.lastname}}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="content photos">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-10 col-sm-offset-1">
+                                        <h4>Photos et Vidéos</h4>
+                                        <div class="photo-slider">
+                                            <img src="{{asset('bundles/heticapp/img/photo1.png')}}" class="photo-entreprise">
+                                            <img src="{{asset('bundles/heticapp/img/photo2.png')}}" class="photo-entreprise">
+                                            <img src="{{asset('bundles/heticapp/img/photo3.png')}}" class="photo-entreprise">
+                                            <img src="{{asset('bundles/heticapp/img/photo4.png')}}" class="photo-entreprise">
+                                            <img src="{{asset('bundles/heticapp/img/photo5.png')}}" class="photo-entreprise">
+                                            <img src="{{asset('bundles/heticapp/img/photo6.png')}}" class="photo-entreprise">
+                                            <img src="{{asset('bundles/heticapp/img/photo8.png')}}" class="photo-entreprise">
+                                            <img src="{{asset('bundles/heticapp/img/photo7.png')}}" class="photo-entreprise">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content results">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h4>Résultats du tournoi</h4>
+                                        <p>Le tournoi n'a pas encore démaré.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content live">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h4>VIDÉO LIVE DU TOURNOI</h4>
+                                        {% if startup.liveUrl  %}
+                                            <iframe width="560" height="315" src="{{startup.liveUrl}}" frameborder="0" allowfullscreen></iframe>
+                                        {% else %}
+                                            <p>La vidéo sera bientôt disponible.</p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

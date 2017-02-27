@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!--  Basic Meta  -->
+    <meta charset="utf-8">
+
+    <title>{% block title %}PingPongCup{% endblock %}</title>
+
+    <!--  Mobile Meta  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--  SEO  -->
+    <meta name="description" content="PingPongCup">
+    <meta name="keywords" content="PingPongCup">
+    <meta name="author" content="Alexis Buon, Alexandre Cahay, Luc Marie, Rubya Aurore">
+
+    <!--  Fonts and Distant Stylesheets  -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+    <!--  Local Stylesheets  -->
+    <link rel="stylesheet" href="{{asset('bundles/heticapp/css/global.css')}}">
+    {% block stylesheets %}{% endblock %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$('.js-scrollTo').on('click', function() { // Au clic sur un élément
+			var page = $(this).attr('href'); // Page cible
+			var speed = 750; // Durée de l'animation (en ms)
+			$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+			return false;
+		});
+	});
+</script>
+    <!--  Heading Scripts  -->
+
+</head>
+<body>
+
+    {% if app.request.hasPreviousSession %}
+        {% for type, messages in app.session.flashbag.all() %}
+            {% for message in messages %}
+                <div class="flash-{{ type }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+
+    {% if app.request.attributes.get('_route') == "hetic_app_homepage" %}
+        <header class="first_section">
+            <div class="navbar">
+                <div class="logo"></div>
+                <nav class="nav home">
+                			<a href="{{path('fos_user_security_login')}}" class="btn btn-connexion">Connexion</a>
+                			<a href="#zone_pourquoi_inscrire" class="btn btn-participer js-scrollTo">Participer</a>
+                		</nav>
+            </div>
+            <div class="logo_home"></div>
+            <div class="slogan">Qui sera le maître du ping-pong ?</div>
+            <div class="next"><a class="js-scrollTo" href="#concept">
+      <span class="circle"></span>
+    </a></div>
+        </header>
+    {% else %}
+        <header>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="logo pull-left">
+                            <a href="{{path('hetic_app_homepage')}}">
+                                <img src="{{asset('bundles/heticapp/img/logo.png')}}" height="40px">
+                            </a>
+                        </div>
+                		<nav class="nav pull-right">
+                			<a href="{{path('fos_user_security_login')}}" class="btn btn-connexion">Connexion</a>
+                			<a href="{{path('hetic_app_homepage')}}#register" class="btn btn-participer">Participer</a>
+                		</nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+    {% endif %}
+
+    {% block main %}
+    {% endblock %}
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="pull-left">
+                       <img style="width: 7%;display:inline-block;margin-right:2%;"src="{{asset('bundles/heticapp/img/logo_dv.png')}}">  Digital Village © 2016. Tous droits réservés.
+                    </div>
+                    <div class="pull-right">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Include Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    {% block include_js %}{% endblock %}
+
+    <!-- Initialize Scripts -->
+    {% block init_js %}{% endblock %}
+    <script type="text/javascript">
+        (function($){
+
+        })(jQuery);
+    </script>
+</body>
+</html>

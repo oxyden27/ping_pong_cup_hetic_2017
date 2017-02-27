@@ -1,0 +1,13 @@
+services:
+#    hetic_user.example:
+#        class: HETIC\UserBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    user.form.registration:
+        class: HETIC\UserBundle\Form\Type\RegistrationFormType
+        tags:
+            - { name: form.type, alias: user_registration }
+
+    redirect.after.login:
+        class: HETIC\UserBundle\Redirection\AfterLoginRedirection
+        arguments: ['@router']

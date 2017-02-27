@@ -1,0 +1,67 @@
+{% extends 'HETICCoreBundle::layoutSA.html.twig' %}
+
+{% block main %}
+
+   <main id="superadmin" role="main">
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+
+                        <div class="content">
+                            <h5>PARTICIPANTS À CONFIRMER</h5>
+                            <h5 style="float:right;">Phase <strong style="font-size:1.5em;color:#fe5b39">1</strong> - 2 - 3</h5>
+                            <table class="table">
+
+                                <thead>
+                                    <tr>
+                                        <th>Statut</th>
+                                        <th></th>
+                                        <th>Nom startup</th>
+                                        <th>Type startup</th>
+                                        <th>Nom</th>
+                                        <th>Prénom</th>
+                                        <th>Adresse e-mail</th>
+                                        <th>Téléphone</th>
+                                        <th>Actions</th>
+                                        <th>Contact</th>
+                                        <th>Champions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for startup in startups %}
+                                        <tr>
+                                            {% if startup.status == 1 %}<td style="color:green">Validé{% else %}<td style="color:red">Non validé{% endif %}</td>
+                                            <td>{% if startup.imageName != null %}<img src="{{ vich_uploader_asset(startup, 'logoFile') }}" width="40" height="40">{% else %}<img src="http://placehold.it/40x40">{% endif %}</td>
+                                            <td>{{startup.name}}</td>
+                                            <td>{{startup.type}}</td>
+                                            <td>{{startup.getOwner.getLastname}}</td>
+                                            <td>{{startup.getOwner.getFirstname}}</td>
+                                            <td>{{startup.getOwner.getEmail}}</td>
+                                            <td>{{startup.getOwner.getPhone}}</td>
+                                            <td>
+                                                {% if startup.status == 1 %}
+                                                    <a href="{{path('hetic_core_superadmin_startup_refuse', {'id': startup.id})}}">Dévalider</a>
+                                                {% else %}
+                                                    <a href="{{path('hetic_core_superadmin_startup_validate', {'id': startup.id})}}">Valider</a>
+                                                {% endif %}
+                                            </td>
+                                            <td>
+                                                <a href="#" data-toggle="modal" data-target="#myModal">Envoyer e-mail</a>
+                                            </td>
+                                            <td>
+                                                <input type="text" style="width:50px;">
+                                                <input type="submit" value="Ok">
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+</main>
+
+{% endblock main %}

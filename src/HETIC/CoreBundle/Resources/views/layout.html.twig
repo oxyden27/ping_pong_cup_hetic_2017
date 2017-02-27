@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!--  Basic Meta  -->
+    <meta charset="utf-8">
+
+    <title>{% block title %}PingPongCup | Admin{% endblock %}</title>
+
+    <!--  Mobile Meta  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--  SEO  -->
+    <meta name="description" content="PingPongCup">
+    <meta name="keywords" content="PingPongCup">
+    <meta name="author" content="Alexis Buon, Alexandre Cahay, Luc Marie, Rubya Aurore">
+
+    <!--  Fonts and Distant Stylesheets  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!--  Local Stylesheets  -->
+    <link rel="stylesheet" href="{{asset('bundles/heticcore/css/global.css')}}">
+    <link rel="stylesheet" href="{{asset('bundles/heticcore/css/tournament.css')}}">
+    {% block stylesheets %}{% endblock %}
+
+    <!--  Heading Scripts  -->
+
+</head>
+<body>
+
+    {% if app.request.hasPreviousSession %}
+        {% for type, messages in app.session.flashbag.all() %}
+            {% for message in messages %}
+                <div class="flash-{{ type }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+
+    <header>
+              <div class="top-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <a style="color:#fe5b39" href="{{path('hetic_app_homepage')}}"><img style="width: 7%;display:inline-block;margin-right:2%;"src="{{asset('bundles/heticapp/img/logo_dv.png')}}"><h1 style="display:inline-block;">Ping Pong Startup Cup</h1>
+                    </div></a>
+                    <div class="col-sm-6">
+                        <div class="pull-right">
+                            <div class="pull-left">
+                                <span class="user">{% if is_granted('ROLE_ADMIN')%}{{app.user.firstname}} {{app.user.lastname}}{% else %}Super Admin{% endif %}</span><br>
+                                <a href="{{path('fos_user_security_logout')}}" class="logout">Déconnexion</a>
+                            </div>
+                            <img style="width: 30px;"src="{{asset('bundles/heticapp/img/profilzer.png')}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="role">{% if is_granted('ROLE_ADMIN') %}Admin{% else %}Super Admin{% endif %}</h1>
+                    <nav class="navigation">
+                        <ul>
+                            <li {% if app.request.attributes.get('_route') == "hetic_core_homepage" %}class="active"{% endif %}><a href="{{path('hetic_core_homepage')}}">Invitation & Participants</a></li>
+                            <li {% if app.request.attributes.get('_route') == "hetic_core_tournament" %}class="active"{% endif %}><a href="{{path('hetic_core_tournament')}}">Gestion du Tournoi Interne</a></li>
+                            <li {% if app.request.attributes.get('_route') == "hetic_core_startup_profile" %}class="active"{% endif %}><a href="{{path('hetic_core_startup_profile', {'id': app.user.getStartup.getId()})}}">Profil entreprise</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {% block main %}
+    {% endblock %}
+
+    <footer>
+
+    </footer>
+
+    <!-- Include Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://underscorejs.org/underscore-min.js"></script>
+    {% block include_js %}{% endblock %}
+    <script src="{{asset('bundles/heticcore/js/jQueryBracket.min.js')}}"></script>
+    <script src="{{asset('bundles/heticcore/js/tournament.js')}}"></script>
+
+    <!-- Initialize Scripts -->
+    {% block init_js %}{% endblock %}
+    <script type="text/javascript">
+        (function($){
+
+        })(jQuery);
+    </script>
+</body>
+</html>

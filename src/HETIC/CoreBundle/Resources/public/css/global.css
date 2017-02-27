@@ -1,0 +1,235 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Light.otf");
+}
+@font-face {
+    font-family: "title";
+    src: url("../fonts/Montserrat-SemiBold.otf");
+}
+@font-face {
+    font-family: "text_body";
+    src: url("../fonts/Montserrat-Regular.otf");
+}
+@font-face {
+    font-family: "para";
+    src: url("../fonts/Montserrat-ExtraLight.otf");
+}
+
+header .top-header {
+    height: 65px;
+    border-bottom: 1px solid #DDD;
+    display: flex;
+    align-items: center;
+    color: #fe5b39;
+    background-color: black;
+    box-shadow: 0 0 5px black;
+    font-family: Montserrat;
+}
+header .top-header .row {
+    display: flex;
+    align-items: center;
+}
+header .top-header h1 {
+    font-size: 1em;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 30px;
+    margin: 0;
+}
+header .top-header span.user {
+    margin-right: 10px;
+}
+header .top-header a.logout {
+    font-size: 0.8em;
+    float: right;
+    margin-right: 10px;
+}
+header nav.navigation {
+
+}
+header nav.navigation ul {
+    padding: 0;
+    margin-bottom: 20px;
+    list-style: none;
+}
+header nav.navigation ul li {
+    display: inline-block;
+    font-size: 1.3em;
+    margin: 0 20px;
+    text-transform: uppercase;
+}
+header nav.navigation ul li:first-of-type {
+    margin-left: 0;
+}
+header nav.navigation ul li.active {
+    font-weight: bold;
+}
+header nav.navigation ul li a {
+    color: #000;
+    padding-bottom: 5px;
+}
+header nav.navigation ul li a:hover {
+    border-bottom: 3px solid #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+header h1.role {
+    text-transform: uppercase;
+}
+main#landing .content {
+    padding-left: 20px;
+    border-left: 1px solid #DDD;
+}
+main#landing .content table tr {
+    border-bottom: 1px solid #DDD;
+}
+main#profile .banner {
+    width: 100%;
+    height: 275px;
+    position: relative;
+    margin-bottom: 150px;
+    background-position: center;
+    background-size: cover;
+}
+main#profile .banner .logo_container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+    width: 175px;
+    height: 175px;
+    bottom: -75px;
+    background: #FFF;
+    padding: 10px;
+}
+main#profile .banner .logo_container .logo img {
+    height: 155px;
+    width: 155px;
+}
+main#profile .banner .logo_container .logo h3 {
+    margin-top: 10px;
+    text-align: center;
+    color: #fe5b39;
+}
+main#profile h4 {
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+}
+main#profile .content {
+    margin-bottom: 30px;
+}
+main#profile .content p {
+    max-width: 750px;
+    text-align: center;
+    margin: 20px auto;
+}
+main#profile .banner .edit_button {
+    position: absolute;
+    top: 20px;
+    right: 13px;
+}
+main#profile .banner .edit_button a {
+    color: #FFF;
+    border: 1px solid #FFF;
+    padding: 8px 10px;
+}
+main#profile .banner .edit_button a:hover {
+    text-decoration: none;
+    background: #FFF;
+    color: #444;
+}
+.label-entreprise {
+    display: block;
+    margin-top: 0px;
+    color: #333;
+    font-weight: bold;
+}
+
+.contenu {
+    padding: 30px 20px 0 20px;
+    text-align: center;
+
+}
+
+.participants {
+    background: #d8d8d8;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.liste-participants {
+    display: inline-block;
+    columns: 3 120px;
+    column-gap: 20px;
+    padding: 0;
+    font-size: 1.1em;
+}
+.photo-entreprise {
+    display: inline-block;
+    max-width: 17%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+}
+main#profile .raquette {
+    top: 3%;
+    right: 1%;
+    position: absolute;
+    width: 60px;
+}
+main#profile .balle {
+    width: 12px;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+main#profile .live .col-sm-12{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.send_all_email{
+        background-color: transparent;
+    border: 1px solid #fe5b39;
+    border-radius: 10px;
+     transition: all 0.6s ease;
+}
+
+.send_all_email:hover{
+        background-color: #fe5b39;
+    border: 1px solid #fe5b39;
+    border-radius: 10px;
+    color:white;
+    transition: all 0.6s ease;
+}
+
+.container{
+    font-family: Montserrat;
+}
+main#superadmin table td {
+    vertical-align: middle;
+}
+div.jQBracket .team div.label {
+    color: black;
+}
+div.jQBracket .team:first-child div.label {
+    padding-top: 10px;
+}
+div.jQBracket .team:first-child {
+    border-width: 2px!important;
+}
+.connector {
+    border-width: 1px!important;
+}
+div.jQBracket .team {
+    background: white!important;
+    height: 24px;
+}
+div.jQBracket .team.highlight{
+    background: #fe5b39!important;
+}

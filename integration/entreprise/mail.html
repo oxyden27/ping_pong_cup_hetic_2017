@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		html, body {
+			box-sizing: border-box;
+		}
+		.main {
+			max-width: 800px;
+			background: lightgrey;
+			width: 100%;
+			margin: 0 auto;
+		}
+		.header {
+			height: 50px;
+			display: flex;
+			justify-content: space-between;
+			padding: 0 20px;
+			align-items: center;
+			width: calc(100% - 40px);
+			margin-bottom: 20px;
+		}
+		.logo {
+			display: block;
+			width: 140px;
+			height: 30px;
+			background: url(img/logo.png);
+			background-position: center;
+    		background-size: cover;
+		}
+		.btn {
+			background: none;
+			padding: 4px 25px;
+			border: 1px solid black;
+			border-radius: 1px;
+			cursor: pointer;
+		}
+		.rezo {
+			width: 100%;
+			max-width: 105px;
+			min-width: 80px;
+			cursor: pointer;
+		}
+		.contenu {
+			text-align: center;
+			padding: 5px 20px;
+			margin-bottom: 20px;
+		}
+		.contenu header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			max-width: 90%;
+			margin: 0 auto;
+		}
+		.contenu p {
+			margin: 2em auto;
+		}
+		.mail {
+			max-width: 80%;
+			display: block;
+			margin: 20px auto;
+			line-height: 1.9em;
+		}
+		.profil {
+			background: red;
+			width: 50px;
+			height: 50px;
+		}
+		.footer {
+			height: 50px;
+		    color: white;
+		    display: flex;
+		    justify-content: space-around;
+		    align-items: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<header class="header">
+			<div class="logo"></div>
+			<div class="profil"></div>
+		</header>
+		<section class="contenu">
+			<header>
+				<h2>Bonjour</h2>
+				<img src="img/rezo.png" class="rezo">
+			</header>
+			<p class="mail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat corrupti optio recusandae voluptates voluptas quaerat sed modi nobis nihil ratione itaque tempore, magni consequatur veritatis quibusdam ullam maiores cum saepe!</p>
+			<div class="cta">
+				<button class="btn">Lien</button>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="digital-village"><a href="#">© Digital Village</a></div>
+			<img src="img/rezo-bot.png" class="rezo">
+		</footer>
+	</div>
+</body>
+</html>

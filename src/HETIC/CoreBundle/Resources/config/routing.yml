@@ -1,0 +1,63 @@
+# ADMIN
+
+hetic_core_homepage:
+    path:     /admin/equipe
+    defaults: { _controller: HETICCoreBundle:Landing:index }
+
+hetic_core_homepage_invite:
+    path:     /admin/equipe/invite
+    defaults: { _controller: HETICCoreBundle:Landing:invite }
+
+hetic_core_tournament:
+    path:     /admin/tournois
+    defaults: { _controller: HETICCoreBundle:Tournament:index }
+
+hetic_core_tournament_join:
+    path:     /admin/tournois/rejoindre
+    defaults: { _controller: HETICCoreBundle:Tournament:join }
+
+hetic_core_tournament_show:
+    path:     /admin/tournois/{id}
+    defaults: { _controller: HETICCoreBundle:Tournament:show }
+
+hetic_core_startup_profile:
+    path:     /admin/startup/{id}/profil
+    defaults: { _controller: HETICCoreBundle:Profile:index }
+
+hetic_core_startup_edit:
+    path:     /admin/startup/{id}/profil/modifier
+    defaults: { _controller: HETICCoreBundle:Profile:edit }
+
+hetic_core_get_players:
+    path:     /getplayers
+    defaults: { _controller: HETICCoreBundle:Tournament:getPlayers }
+
+# SUPER ADMIN
+
+hetic_core_superadmin_homepage:
+    path:     /superadmin/dashboard
+    defaults: { _controller: HETICCoreBundle:SuperAdmin:index }
+
+hetic_core_superadmin_tournament:
+    path:     /superadmin/tournois
+    defaults: { _controller: HETICCoreBundle:SuperAdmin:showTournaments }
+
+hetic_core_superadmin_tournament_create:
+    path:     /superadmin/tournois/créer
+    defaults: { _controller: HETICCoreBundle:SuperAdmin:createTournament }
+
+hetic_core_superadmin_tournament_edit:
+    path:     /superadmin/tournois/modifier
+    defaults: { _controller: HETICCoreBundle:SuperAdmin:editTournament }
+
+hetic_core_superadmin_startup:
+    path:     /superadmin/startups
+    defaults: { _controller: HETICCoreBundle:SuperAdmin:showStartup }
+
+hetic_core_superadmin_startup_validate:
+    path:     /superadmin/startup/{id}/valider
+    defaults: { _controller: HETICCoreBundle:SuperAdmin:validateStartup }
+
+hetic_core_superadmin_startup_refuse:
+    path:     /superadmin/startup/{id}/refuser
+    defaults: { _controller: HETICCoreBundle:SuperAdmin:refuseStartup }

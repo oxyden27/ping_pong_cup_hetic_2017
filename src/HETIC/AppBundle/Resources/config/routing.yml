@@ -1,0 +1,15 @@
+hetic_app_homepage:
+    path:     /
+    defaults: { _controller: HETICAppBundle:Landing:index }
+
+hetic_app_startup_list:
+    path:     /startup/liste
+    defaults: { _controller: HETICAppBundle:Profile:list }
+
+hetic_app_startup_profile:
+    path:     /startup/{id}/profil
+    defaults: { _controller: HETICAppBundle:Profile:show }
+
+hetic_app_startup_join:
+    path:     /startup/{id}/rejoindre
+    defaults: { _controller: HETICCoreBundle:Startup:join }

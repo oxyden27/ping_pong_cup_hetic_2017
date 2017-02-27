@@ -1,0 +1,79 @@
+{% extends 'HETICCoreBundle::layout.html.twig' %}
+
+{% block title %}{{parent()}}{% endblock %}
+
+{% block main %}
+    <main id="landing" role="main">
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                       <img style="float:right;"src="http://placehold.it/60x60">
+                        <div class="titre_entreprise">
+                            {{startup.name}} ({{startup.type}})
+                        </div>
+                        <div class="content">
+                            <h5>{{startup.players|length + 1}} participants</h5>
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Statut</th>
+                                        <th>Prénom</th>
+                                        <th>Nom</th>
+                                        <th>Adresse email</th>
+                                        <th>Téléphone</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Admin</td>
+                                        <td>{{owner.firstname}}</td>
+                                        <td>{{owner.lastname}}</td>
+                                        <td>{{owner.email}}</td>
+                                        <td>{{owner.phone}}</td>
+                                    </tr>
+                                    {% for player in players %}
+                                        <tr>
+                                            <td></td>
+                                            <td>{{player.firstname}}</td>
+                                            <td>{{player.lastname}}</td>
+                                            <td>{{player.email}}</td>
+                                            <td>{{player.phone}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+
+                            <button class="send_all_email" data-toggle="modal" data-target="#myModal">Inviter des collègues</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <form action="{{path('hetic_core_homepage_invite')}}" method="post">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Inviter des collègues au tournoi</h4>
+                  </div>
+                  <div class="modal-body">
+                      <p>Invitez vos collègues à participer à la Ping Pong Startup Cup. Pour ce faire, entrez leurs adresses email dans l'encadré ci-dessous. Un email leur sera envoyé leur proposant de rejoindre l'évènement.</p>
+                      <small>Veuillez séparer chaque adresse email par un ';'</small>
+                      <textarea name="players" class="form-control" rows="10"></textarea>
+                      <br>
+                      <p>ou importez un fichier csv de vos adresses email :</p>
+                      <input type="file">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
+    </main>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'HETICCoreBundle::layout.html.twig' %}
+
+{% block title %}{{parent()}}{% endblock %}
+
+{% block main %}
+    <main id="profile_edit" role="main">
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        {{form_start(form, {'attr': {'class': 'form-horizontal col-sm-6'}})}}
+                            <div class="form-group">
+                                {{form_label(form.name)}}
+                                {{form_widget(form.name)}}
+                            </div>
+                            <div class="form-group">
+                                {{form_label(form.description)}}
+                                {{form_widget(form.description)}}
+                            </div>
+                            <div class="form-group">
+                                {{form_label(form.type)}}
+                                {{form_widget(form.type)}}
+                            </div>
+                            <div class="form-group">
+                                {{form_widget(form.imageFile)}}
+                            </div>
+                            <div class="form-group">
+                                {{form_widget(form.logoFile)}}
+                            </div>
+                            <div class="form-group">
+                                {{form_label(form.liveUrl)}}
+                                {{form_widget(form.liveUrl)}}
+                            </div>
+                            <div class="form-group">
+                                {{form_widget(form.save)}}
+                            </div>
+                        {{form_end(form)}}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

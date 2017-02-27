@@ -1,0 +1,66 @@
+
+body {
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+}
+
+.bloc_connexion {
+    background-color:#fe5b39;
+    width:450px;
+    height:250px;
+    border-radius:10px;
+    margin-left:50px;
+    margin-top:50px;
+}
+
+.title_connexion {
+    color:white;
+    padding-left:5%;
+    padding-top:5%;
+    text-transform: uppercase;
+}
+
+.zone_connexion {
+    width:100%;
+    height:100%;
+    padding:5%;
+    background-color:blue;
+}
+
+input[type="submit"]{
+background-color:white;
+color:#fe5b39;
+    font-size:1em;
+}
+
+.form_connexion {
+    margin-left:5%;
+}
+
+
+.form_connexion input {
+    width:200px;
+    height:30px;
+    text-decoration: none;
+    border:none;
+    padding-left: 3%;
+}
+
+.form_connexion input:last-child {
+   margin-top:5%;
+padding-left: 3%;
+    width:213px;
+    height:30px;
+}
+
+.margin_input{
+    margin-top:5%;
+}
+
+.forget_password {
+    color:black;
+    margin-left:5%;
+    margin-top:3%;
+}

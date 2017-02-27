@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		html, body {
+			padding: 0;
+			margin: 0;
+			height: 100%;
+			font-size: 16px;
+			box-sizing: border-box;
+		}
+		.header {
+			background: #fff;
+			height: 50px;
+			display: flex;
+			justify-content: space-between;
+			padding: 0 20px;
+			align-items: center;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: calc(100% - 40px);
+			z-index: 9;
+		}
+		.logo {
+			display: block;
+			width: 140px;
+			height: 30px;
+			background: url(img/logo.png);
+			background-position: center;
+    		background-size: cover;
+    		cursor: pointer;
+		}
+		.btn {
+			background: none;
+			padding: 4px 25px;
+			border: 1px solid black;
+			border-radius: 1px;
+			cursor: pointer;
+		}
+		.btn-connexion {
+			border-color: #d8d8d8;
+			color: #d8d8d8;
+		}
+		.btn-participer {
+			color: #fe5b39;
+			border-color: #fe5b39;
+		}
+		.main{
+			min-height: 100%;
+		}
+		.entreprise {
+			padding-top: 50px;	
+		}
+		.baniere {
+			background: url(img/baniere.png);
+			background-position: center;
+    		background-size: cover;
+			height: 135px;
+			position: relative;
+		}
+		.img-entreprise {
+			display: block;
+			width: 100px;
+			height: 100px;
+			background: url(img/img-entreprise.png);
+			background-position: center;
+    		background-size: cover;
+		    position: absolute;
+		    bottom: -30px;
+		    left: calc(50% - 50px);
+		    text-align: center;
+		}
+		.label-entreprise {
+			display: block;
+			margin-top: 0px;
+			color: #fe5b39;
+			font-weight: bold;
+		}
+		.panel-entreprise {
+			font-size: 0.9em;
+			max-width: 80%;
+    		margin: 30px auto 0 auto;
+		}
+		.descriptif {
+			max-width: 40%;
+		}
+		.contenu {
+			padding: 30px 20px 0 20px;
+			text-align: center;
+		}
+		.h4-section{
+			text-transform: uppercase;
+		}
+		.participants {
+			background: #d8d8d8;
+			position: relative;
+			box-shadow: 0 0 4px #d8d8d8;
+		}
+		.liste-participants {
+			display: inline-block;
+			columns: 3 120px;
+			column-gap: 20px;
+			list-style: none;
+			padding: 0;
+			font-size: 1.1em;
+		}
+		.liste-participants li:before {
+			content: '•';
+		    margin-right: 10px;	
+		}
+		.raquette {
+			top: 3%;
+		    right: 1%;
+		    position: absolute;
+		    width: 60px;
+		}
+		.balle {
+			width: 12px;
+		    position: absolute;
+		    top: 30%;
+		    right: 10%;
+		}
+		.footer {
+			height: 70px;
+			background: black;
+		    color: white;
+		    display: flex;
+		    justify-content: space-around;
+		    align-items: center;
+		}
+		.resultats {
+			clear: both;
+		}
+		.rezo {
+			width: 100%;
+			max-width: 105px;
+			min-width: 80px;
+			cursor: pointer;
+		}
+		.rezo-top {
+			position: absolute;
+		    top: 30%;
+		    right: 12%;
+		}
+		.photo-entreprise {
+			display: inline-block;
+		    max-width: 17%;
+		    margin-right: 1%;
+		    margin-bottom: 1%;
+		    margin-left: 1%;
+		}
+		.photo-slider img:nth-child(5n){
+			margin-right: 0;
+		}
+		.photo-slider img:nth-child(1){
+			margin-left: 0;
+		}
+		.digital-village a {
+		    text-decoration: none;
+		    color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<header class="header">
+		<div class="logo"></div>
+		<nav class="nav">
+			<button class="btn btn-connexion">Connexion</button>
+			<button class="btn btn-participer">Participer</button>
+		</nav>
+	</header>
+	<section class="main">
+		<section class="entreprise">
+			<div class="baniere">
+				<div class="img-entreprise"></div>
+			</div>
+			<div class="contenu">
+				<h2 class="label-entreprise">Entreprise</h2>
+				<img src="img/rezo.png" class="rezo rezo-top">
+				<div class="descriptif panel-entreprise">
+					<h4 class="h4-section">Descriptif</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In hic, vitae labore unde similique dignissimos assumenda! Facilis recusandae modi qui odit cupiditate ab animi, similique adipisci porro, quod quis autem.</p>
+				</div>
+				<div class="participants panel-entreprise">
+					<img src="img/raquette.png" class="raquette">
+					<img src="img/balle.png" class="balle">
+					<h4 class="h4-section">Participants</h4>
+					<p>12 participants</p>
+					<ul class="liste-participants">
+						<li>lorem</li>
+						<li>lorem</li>
+						<li>lorem</li>
+						<li>lorem</li>
+						<li>lorem</li>
+						<li>lorem</li>
+						<li>lorem</li>
+						<li>lorem</li>
+						<li>lorem</li>
+						<li>lorem</li>
+						<li>lorem</li>
+						<li>lorem</li>
+					</ul>
+				</div>
+				<div class="panel-entreprise photos">
+					<h4 class="h4-section">Photos et Vidéos</h4>
+					<div class="photo-slider">
+						<img src="img/photo1.png" class="photo-entreprise">
+						<img src="img/photo2.png" class="photo-entreprise">
+						<img src="img/photo3.png" class="photo-entreprise">
+						<img src="img/photo4.png" class="photo-entreprise">
+						<img src="img/photo5.png" class="photo-entreprise">
+						<img src="img/photo6.png" class="photo-entreprise">
+						<img src="img/photo8.png" class="photo-entreprise">
+						<img src="img/photo7.png" class="photo-entreprise">
+					</div>
+				</div>
+				<div class="panel-entreprise resultats">
+					<h4 class="h4-section">Résultats du tournoi</h4>
+					<div id="tree"></div>
+				</div>
+			</div>
+			<footer class="footer">
+		        <div class="digital-village"><a href="#">© Digital Village. Tous droits réservés</a></div>
+		        <img src="img/rezo-bot.png" class="rezo">
+		      </footer>
+		</section>
+	</section>
+</body>
+</html>

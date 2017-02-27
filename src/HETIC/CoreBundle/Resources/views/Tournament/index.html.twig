@@ -1,0 +1,28 @@
+{% extends 'HETICCoreBundle::layout.html.twig' %}
+
+{% block title %}{{parent()}}{% endblock %}
+
+{% block main %}
+    <main id="tournament" role="main">
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="pull-left">
+                            <p>Date limite de résultats : 20 avril 2017</p>
+                        </div>
+                        <div class="pull-right">
+                            <a href="#" class="btn" id="generer">Générer les matchs</a>
+                            <a href="#" class="btn">Export PDF</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="turnament"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
